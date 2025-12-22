@@ -7,11 +7,11 @@
 
 ## Why This Project?
 
-2024 was a record year for Israeli tech M&A - over $13 billion in deals, including Salesforce buying Own for $1.9B and Nvidia acquiring Run:ai for $700M. I kept seeing headlines about these acquisitions and wondered: how do investors actually identify which companies are good acquisition targets?
+2024 was a record year for Israeli tech M&A - over $13 billion in deals, including Salesforce buying Own for $1.9B and Nvidia acquiring Run:ai for $700M ! I kept seeing headlines about these acquisitions and wondered: how do investors actually identify which companies are good acquisition targets? and what does this mean ?
 
-So I built a simple screening tool to find potentially undervalued Israeli tech companies using the same methods investment banks use - comparable company analysis and DCF valuation.
+so I built a simple screening tool to find potentially undervalued Israeli tech companies using the same methods investment banks use : the  comparable company analysis and DCF valuation.
 
-This is a small project but it touches on real finance concepts that I wanted to understand better.
+this is a small project but it touches on real finance concepts that I wanted to understand better with my heavy statistical background.
 
 ---
 
@@ -35,9 +35,9 @@ Automatically fetches live data from Yahoo Finance for 8 NASDAQ-listed Israeli t
 The scatter plot shows Revenue Growth vs. EV/Revenue multiple. The regression line represents "fair value" - companies below the line might be undervalued relative to their growth.
 
 **Key findings:**
-- **SEDG and PAYO** sit in the bottom-right (high growth, low multiple) - potential M&A targets
-- **CYBR** trades at a premium (17x revenue) - probably due to the "cybersecurity premium"
-- **CHKP** also commands high multiples despite lower growth - stable recurring revenue
+- **SEDG and PAYO** sit in the bottom-right (high growth , low multiple) : potential M&A targets
+- **CYBR** trades at a premium (17x revenue) : probably due to the "cybersecurity premium"
+- **CHKP** also commands high multiples despite lower growth ( stable recurring revenue )
 
 ### 3. Monte Carlo DCF Valuation
 
@@ -56,7 +56,7 @@ The histogram shows most likely valuations cluster around $6.5-7.5 billion, whic
 
 ## Tech Stack
 
-- **Python** : pandas , numpy, matplotlib, seaborn , scikit-learn
+- **Python** : pandas , numpy , matplotlib, seaborn , scikit-learn
 - **yfinance** : real time financial data
 - **Finance concepts** : DCF, WACC, EV/Revenue multiples , comparable company analysis
 
