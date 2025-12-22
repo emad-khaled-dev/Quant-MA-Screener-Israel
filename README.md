@@ -49,11 +49,6 @@ The histogram shows most likely valuations cluster around $6.5-7.5 billion, whic
 
 ---
 
-## Technical Details
-
-
----
-
 ## Tech Stack
 
 - **Python** : pandas , numpy , matplotlib, seaborn , scikit-learn
@@ -79,14 +74,14 @@ ma-screener/
 
 ## Limitations
 
-This is a simplified model - real M&A analysis would include:
-- Detailed financial statement analysis
-- Industry-specific multiples
-- Synergy valuations
+This is a simplified model, and so a real M&A analysis would include:
+- A detailed financial statement analysis
+- industry-specific multiples
+- synergy valuations
 - Due diligence factors
 - More sophisticated DCF with projected cash flows
 
-But for a quick screening tool to identify potential targets, this works pretty well.
+But for a quick screening tool to identify potential targets, this worked pretty well for me !
 
 ---
 
