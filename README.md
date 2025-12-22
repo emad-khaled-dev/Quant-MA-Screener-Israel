@@ -51,42 +51,14 @@ The histogram shows most likely valuations cluster around $6.5-7.5 billion, whic
 
 ## Technical Details
 
-**Data Pipeline:**
-```python
-# Pulls EV, Revenue, EBITDA, Growth for each ticker
-stock = yf.Ticker(ticker)
-info = stock.info
-metrics = {
-    'EnterpriseValue': info.get('enterpriseValue'),
-    'Revenue': info.get('totalRevenue'),
-    'RevGrowth': info.get('revenueGrowth'),
-    ...
-}
-```
-
-**Valuation Gap Calculation:**
-```python
-# Linear regression: Growth → Expected Multiple
-model = LinearRegression().fit(X, y)
-df['Predicted_Multiple'] = model.predict(X)
-df['Valuation_Gap'] = df['EV_Rev_Multiple'] - df['Predicted_Multiple']
-```
-
-**Monte Carlo Simulation:**
-```python
-# WACC varies around 9% with 1% std dev
-wacc_sims = np.random.normal(0.09, 0.01, iterations)
-# Gordon Growth Model for terminal value
-intrinsic_value = fcf / (wacc - terminal_growth)
-```
 
 ---
 
 ## Tech Stack
 
-- **Python** - pandas, numpy, matplotlib, seaborn, scikit-learn
-- **yfinance** - real-time financial data
-- **Finance concepts** - DCF, WACC, EV/Revenue multiples, comparable company analysis
+- **Python** : pandas , numpy, matplotlib, seaborn , scikit-learn
+- **yfinance** : real time financial data
+- **Finance concepts** : DCF, WACC, EV/Revenue multiples , comparable company analysis
 
 ---
 
@@ -129,10 +101,10 @@ python ma_project.py
 
 ## What I Learned
 
-- How to pull financial data programmatically with yfinance
-- The logic behind comparable company analysis (why growth justifies higher multiples)
-- Monte Carlo simulation for handling uncertainty in valuations
-- Why certain sectors (cybersecurity) command premium valuations
+- I learned how to pull financial data programmatically with yfinance
+- the logic behind comparable company analysis (why growth justifies higher multiples)
+- exercised Monte Carlo simulation for handling uncertainty in valuations
+- Why certain sectors (like cybersecurity) command premium valuations
 
 ---
 
